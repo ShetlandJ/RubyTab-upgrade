@@ -66,12 +66,13 @@ var procs = [];
 //var myArray = [operators, loops_branching, print_to_console, commenting, variables, get_string, arrays]
 var myArray = [operators, loops_branching, arrays]
 
-
+//display random tip on page load
 document.addEventListener("DOMContentLoaded", function(event) {
     var x = myArray[Math.floor(Math.random() * myArray.length)][Math.floor(Math.random() * myArray.length)];
     document.getElementById("container").innerHTML = x;
   });
 
+//display random comment on button click
 function myFunction() {
   var x = myArray[Math.floor(Math.random() * myArray.length)][Math.floor(Math.random() * myArray.length)];
   document.getElementById("container").innerHTML = x;

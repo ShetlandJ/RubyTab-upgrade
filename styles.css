@@ -37,6 +37,19 @@ p, li {
     display: block; /* Make the links appear below each other */
     padding: 12px; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
+    font-size: 1.25em;
+}
+
+.vertical-menu a.selected {
+    background-color: black; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.25em;
+}
+.vertical-menu a.active {
+    background-color: black; /* Grey background color */
 }
 
 .vertical-menu a:hover {

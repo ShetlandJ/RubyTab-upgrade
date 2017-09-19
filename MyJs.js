@@ -49,7 +49,14 @@ var arrays = [
   "<h3>Multi-dimensional arrays are arrays that contain other arrays!</h3><p>my_multi_array = [[1, 2, 3], [4, 5], [\"John\", 7, 163], [[40, 50], [66, 77]]]</p><br>"
 ];
 
-var hashes = [];
+var hashes = ["<h3>Hashes are used to store key and value piars.</h3> Hashes can contain objects including: strings, integers, arrays, other hashes etc.<p>my_hash = { name => \"Alfred\", age => 83, occupation => \"Butler\" }</p><p>Alternative notation:</p><p>my_hash = { name: \"Alfred\", age: 83, occupation: \"Butler\" }</p>",
+
+"<h3>Values stored in hashes can be accessed by putting the hash name followed by the key in square brackets:</h3><p>my_hash = { name => \"Alfred\", age => 83, occupation => \"Butler\" }</p><p>my_hash[name]</p>",
+
+"<h3>Hashes can be constructed using symbols</h3><p>This is often considered best practice due to the associated faster lookup speeds.</p><p>{ :key1 => value1, :key2 => value2 }</p><p>{:name => “Alfred”, :age => 27, :lang => “Ruby”}</p>",
+
+"<h3>New hashes can be defined in a few ways:</h3><p>new_hash = {“one” => 1 }   #single key/value pair hash created</p><p>new_hash = Hash.new(3)   #blank hash, 3 is default value to return instead of nil</p>"
+];
 
 var methods = [];
 
@@ -64,7 +71,7 @@ var blocks = [];
 var procs = [];
 
 //var myArray = [operators, loops_branching, print_to_console, commenting, variables, get_string, arrays]
-var myArray = [operators, loops_branching, arrays]
+var myArray = [operators, loops_branching, arrays, hashes, methods, writing_to_file, irb, blocks, procs]
 
 //display random tip on page load
 document.addEventListener("DOMContentLoaded", function(event) {

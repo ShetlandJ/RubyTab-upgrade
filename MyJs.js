@@ -58,7 +58,13 @@ var hashes = ["<h3>Hashes are used to store key and value piars.</h3> Hashes can
 "<h3>New hashes can be defined in a few ways:</h3><p>new_hash = {“one” => 1 }   #single key/value pair hash created</p><p>new_hash = Hash.new(3)   #blank hash, 3 is default value to return instead of nil</p>"
 ];
 
-var methods = [];
+var methods = ["<h3>Methods can be invoked on a Ruby object to evaluate it, alter it in some way, iterate over it. Some examples include:</h3><p>Evaluation: .is_a? | .nil? | .start_with? | .respond_to? </p><p>Conversions: .to_a (to array) | .to_f (to_float) | .to_i (to integer) | .to_s (to string) | .to_sym (to symbol) | .downcase</p><p>Arrays/Hashes: .new | .each | .each_key | .each_value | .push | .pop |</p>",
+
+"<h3>Using an exclamation mark after a method will re-assign the object that the method is invoked on.</h3><p>For example: str1.downcase!</p>",
+
+"<h3>String alteration methods:</h3><p>Convert string to an Integer:  "2".to_i</p><p>Convert string to an Integer:  "2".to_i</p>"
+
+];
 
 var ranges = [];
 

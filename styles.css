@@ -1,0 +1,89 @@
+body {
+  margin: 0 auto;
+  font-family: system-ui, sans-serif;
+  font-size: 85%;
+}
+
+h3 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+p, li {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.10em;
+  padding-bottom: 5px;
+  font-family: Consolas, monaco, monospace
+}
+
+#tip {
+  padding-bottom: 20px;
+  font-size: 35px;
+  margin-top: 35px;
+}
+
+.vertical-menu {
+    width: 150px; /* Set a width if you like */
+    height: 700px;
+    background-color: #eee;
+    display: inline-block;
+    position: absolute;
+}
+
+.vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+#toption {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+#content {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  height: 530px;
+}
+
+#container {
+  width: 400px;
+  background-color: #f2f2f2;
+  border: 4px;
+  border-style: solid;
+  border-color: #999999;
+  border-radius: 4px;
+}
+
+button {
+  background-color: rgb(255, 50, 101);
+  border: 0;
+  border-radius: 6px;
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: Arial;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;"
+  font-family: "Open Sans";
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #333333;
+}
+
+#soc {
+  padding-top: 10px;
+}

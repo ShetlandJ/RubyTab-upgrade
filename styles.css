@@ -24,7 +24,7 @@ p, li {
 }
 
 .vertical-menu {
-    width: 150px; /* Set a width if you like */
+    width: 200px; /* Set a width if you like */
     height: 700px;
     background-color: #eee;
     display: inline-block;
@@ -48,8 +48,8 @@ p, li {
     text-decoration: none; /* Remove underline from links */
     font-size: 1.25em;
 }
-.vertical-menu a.active {
-    background-color: black; /* Grey background color */
+.vertical-menu a:focus {
+    background-color: #95d097; /* Grey background color */
 }
 
 .vertical-menu a:hover {
@@ -57,8 +57,8 @@ p, li {
 }
 
 #toption {
-    background-color: #4CAF50; /* Add a green color to the "active/current" link */
-    color: white;
+    background-color: #95d097; /* Add a green color to the "active/current" link */
+    color: black;
 }
 
 #content {

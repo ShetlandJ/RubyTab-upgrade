@@ -49,24 +49,28 @@ var arrays = [
   "<h3>Multi-dimensional arrays are arrays that contain other arrays!</h3><p>my_multi_array = [[1, 2, 3], [4, 5], [\"John\", 7, 163], [[40, 50], [66, 77]]]</p><br>"
 ];
 
-var hashes = ["<h3>Hashes are used to store key and value piars.</h3> Hashes can contain objects including: strings, integers, arrays, other hashes etc.<p>my_hash = { name => \"Alfred\", age => 83, occupation => \"Butler\" }</p><p>Alternative notation:</p><p>my_hash = { name: \"Alfred\", age: 83, occupation: \"Butler\" }</p>",
+var hashes = ["<h3>Hashes are used to store key and value piars.</h3> Hashes can contain objects including: strings, integers, arrays, other hashes etc.<p>my_hash = { name => \"Alfred\", age => 83, occupation => \"Butler\" }</p><p>Alternative notation:</p><p>my_hash = { name: \"Alfred\", age: 83, occupation: \"Butler\" }</p><br>",
 
-"<h3>Values stored in hashes can be accessed by putting the hash name followed by the key in square brackets:</h3><p>my_hash = { name => \"Alfred\", age => 83, occupation => \"Butler\" }</p><p>my_hash[name]</p>",
+"<h3>Values stored in hashes can be accessed by putting the hash name followed by the key in square brackets:</h3><p>my_hash = { name => \"Alfred\", age => 83, occupation => \"Butler\" }</p><p>my_hash[name]</p><br>",
 
-"<h3>Hashes can be constructed using symbols</h3><p>This is often considered best practice due to the associated faster lookup speeds.</p><p>{ :key1 => value1, :key2 => value2 }</p><p>{:name => “Alfred”, :age => 27, :lang => “Ruby”}</p>",
+"<h3>Hashes can be constructed using symbols</h3><p>This is often considered best practice due to the associated faster lookup speeds.</p><p>{ :key1 => value1, :key2 => value2 }</p><p>{:name => “Alfred”, :age => 27, :lang => “Ruby”}</p><br>",
 
-"<h3>New hashes can be defined in a few ways:</h3><p>new_hash = {“one” => 1 }   #single key/value pair hash created</p><p>new_hash = Hash.new(3)   #blank hash, 3 is default value to return instead of nil</p>"
+"<h3>New hashes can be defined in a few ways:</h3><p>new_hash = {“one” => 1 }   #single key/value pair hash created</p><p>new_hash = Hash.new(3)   #blank hash, 3 is default value to return instead of nil</p><br>"
 ];
 
-var methods = ["<h3>Methods can be invoked on a Ruby object to evaluate it, alter it in some way, iterate over it. Some examples include:</h3><p>Evaluation: .is_a? | .nil? | .start_with? | .respond_to? </p><p>Conversions: .to_a (to array) | .to_f (to_float) | .to_i (to integer) | .to_s (to string) | .to_sym (to symbol) | .downcase</p><p>Arrays/Hashes: .new | .each | .each_key | .each_value | .push | .pop |</p>",
+var methods = ["<h3>Methods can be invoked on a Ruby object to evaluate it, alter it in some way, iterate over it. Some examples include:</h3><p>Evaluation: .is_a? | .nil? | .start_with? | .respond_to? </p><p>Conversions: .to_a (to array) | .to_f (to_float) | .to_i (to integer) | .to_s (to string) | .to_sym (to symbol) | .downcase</p><p>Arrays/Hashes: .new | .each | .each_key | .each_value | .push | .pop |</p><br>",
 
-"<h3>Using an exclamation mark after a method will re-assign the object that the method is invoked on.</h3><p>For example: str1.downcase!</p>",
+"<h3>Using an exclamation mark after a method will re-assign the object that the method is invoked on.</h3><p>For example: str1.downcase!</p><br>",
 
-"<h3>String alteration methods:</h3><p>Convert string to an Integer:  "2".to_i</p><p>Convert string to an Integer:  "2".to_i</p>"
+"<h3>String alteration methods:</h3><p>Convert string to an Integer:  "2".to_i</p><p>Convert string to an Integer:  "2".to_i</p><br>"
 
 ];
 
-var ranges = [];
+var ranges = ["<h3>Ranges can be inclusive or exclusive.</h3><p>Inclusive: range(1..n)</p><p>Exclusive: range(0...n)</p><br>",
+
+"<h3>Ranges can be useful in for loops to specify how many times to run the loop.</h3><p>for x in range(0..20)</p><p>print x</p><p>end</p><br>"
+
+];
 
 var writing_to_files = [];
 
@@ -108,6 +112,22 @@ function commentFunction() {
   document.getElementById("container").innerHTML = x;
 };
 
+//irb
+document.getElementById("irb").addEventListener("click", irbFunction);
+
+function irbFunction() {
+  var x = irb[Math.floor(Math.random() * irb.length)];
+  document.getElementById("container").innerHTML = x;
+};
+
+//hashes
+document.getElementById("hashes").addEventListener("click", hashFunction);
+
+function hashFunction() {
+  var x = hashes[Math.floor(Math.random() * hashes.length)];
+  document.getElementById("container").innerHTML = x;
+};
+
 //loops
 document.getElementById("loops").addEventListener("click", loopFunction);
 
@@ -115,6 +135,15 @@ function loopFunction() {
   var x = loops_branching[Math.floor(Math.random() * loops_branching.length)];
   document.getElementById("container").innerHTML = x;
 };
+
+//methods
+document.getElementById("method").addEventListener("click", methodFunction);
+
+function methodFunction() {
+  var x = methods[Math.floor(Math.random() * methods.length)];
+  document.getElementById("container").innerHTML = x;
+};
+
 
 //operators
 document.getElementById("operators").addEventListener("click", opFunction);
@@ -137,5 +166,13 @@ document.getElementById("variables").addEventListener("click", varFunction);
 
 function varFunction() {
   var x = variables[Math.floor(Math.random() * variables.length)];
+  document.getElementById("container").innerHTML = x;
+};
+
+//writing to files
+document.getElementById("write_to_files").addEventListener("click", writeFunction);
+
+function writeFunction() {
+  var x = writing_to_files[Math.floor(Math.random() * writing_to_files.length)];
   document.getElementById("container").innerHTML = x;
 };

@@ -49,7 +49,7 @@ var arrays = [
   "<h3>Multi-dimensional arrays are arrays that contain other arrays!</h3><p>my_multi_array = [[1, 2, 3], [4, 5], [\"John\", 7, 163], [[40, 50], [66, 77]]]</p><br>"
 ];
 
-var hashes = ["<h3>Hashes are used to store key and value piars.</h3> Hashes can contain objects including: strings, integers, arrays, other hashes etc.<p>my_hash = { name => \"Alfred\", age => 83, occupation => \"Butler\" }</p><p>Alternative notation:</p><p>my_hash = { name: \"Alfred\", age: 83, occupation: \"Butler\" }</p><br>",
+var hashes = ["<h3>Hashes are used to store key and value pairs.</h3><p>Hashes can contain objects including: strings, integers, arrays, other hashes etc.</p><p>my_hash = { name => \"Alfred\", age => 83, occupation => \"Butler\" }</p><p>Alternative notation:</p><p>my_hash = { name: \"Alfred\", age: 83, occupation: \"Butler\" }</p><br>",
 
 "<h3>Values stored in hashes can be accessed by putting the hash name followed by the key in square brackets:</h3><p>my_hash = { name => \"Alfred\", age => 83, occupation => \"Butler\" }</p><p>my_hash[name]</p><br>",
 
@@ -62,7 +62,7 @@ var methods = ["<h3>Methods can be invoked on a Ruby object to evaluate it, alte
 
 "<h3>Using an exclamation mark after a method will re-assign the object that the method is invoked on.</h3><p>For example: str1.downcase!</p><br>",
 
-"<h3>String alteration methods:</h3><p>Convert string to an Integer:  "2".to_i</p><p>Convert string to an Integer:  "2".to_i</p><br>"
+"<h3>String alteration methods:</h3><p>Convert string to an Integer:  \"2\".to_i</p><p>Convert string to an Integer:  \"2\".to_i</p><br>"
 
 ];
 
@@ -72,16 +72,16 @@ var ranges = ["<h3>Ranges can be inclusive or exclusive.</h3><p>Inclusive: range
 
 ];
 
-var writing_to_files = [];
+var writing_to_files = ["<h3>You can use Ruby to open a file and show you the contents.</h3><p>To do this, you would use the following code:</p><p>File.open(\"your_file_name.txt\").each do |i|</p><p>puts line</p><p>end</p><p>That will return each line from the file individually."];
 
-var irb = [];
+var irb = ["<h3>You can write Ruby in your Terminal by simply typing irb and pressing enter.</h3><p>This will allow you to communicate with the Ruby interpreter only using your Console.</p><p>To exit out of the process, simply type exit and hit enter.</p>"];
 
-var blocks = [];
+var blocks = ["Peter"];
 
-var procs = [];
+var procs = ["Cats"];
 
 //var myArray = [operators, loops_branching, print_to_console, commenting, variables, get_string, arrays]
-var myArray = [operators, loops_branching, arrays, hashes, methods, writing_to_file, irb, blocks, procs]
+var myArray = [operators, loops_branching, arrays, hashes, methods, writing_to_files, irb, blocks, procs]
 
 //display random tip on page load
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -166,6 +166,14 @@ document.getElementById("variables").addEventListener("click", varFunction);
 
 function varFunction() {
   var x = variables[Math.floor(Math.random() * variables.length)];
+  document.getElementById("container").innerHTML = x;
+};
+
+//rangers
+document.getElementById("ranges").addEventListener("click", rangesFunction);
+
+function rangesFunction() {
+  var x = ranges[Math.floor(Math.random() * ranges.length)];
   document.getElementById("container").innerHTML = x;
 };
 

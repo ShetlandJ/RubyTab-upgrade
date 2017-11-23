@@ -1,6 +1,6 @@
 # RubyTab Chrome Extension - learn Ruby accidentally!
 
-RubyTab is a project that was designed to serve two purposes: 
+RubyTab was a self-started project that was designed to serve two purposes: 
 1. For me to learn how to program Chrome extensions
 2. To help me learn Ruby, as it was the introductory language at CodeClan, the Digital Skills Academy that I studied under from September 2017 to January 2018.
 
